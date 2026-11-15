@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="testData()">Send Data</button>
+    <div id="result"></div>
+
+    <script>
+        function testData() {
+            fetch('lab4_input.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username: "admin", password: "1234"})
+            })
+            .then(response => response.text())
+            .then(reply => {
+                document.getElementById('result').innerHTML = reply;
+            });
+        }
+    </script>
+</body>
+</html>

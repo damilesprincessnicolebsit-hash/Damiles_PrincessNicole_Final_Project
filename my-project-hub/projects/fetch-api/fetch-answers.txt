@@ -1,0 +1,19 @@
+GUIDE QUESTIONS — Fetch API
+1. What are the main differences between XMLHttpRequest and Fetch API?
+- than XML Http;the JavaScript implementation XMLHttpRequest is a much older technology using readyState/status checking; Fetch API is more recent, and works with Promises with.then() and.catch().
+instead of new XMLHttpRequest() you have to write xhr=new XMLHttpRequest() so it takes more lines of code and makes code block less readable; there is a much cleaner, shorter and easy to understand syntax in Fetch API.
+- Fetch API doesn't include cookies in the request; XMLHttpRequest does.
+- In a nutshell: Fetch API is more recent, easier and based Promise; the standard, longer way with older cross-browser method: XMLHttpRequest callbackBased 2.
+
+2. Why is the Fetch API considered more modern and readable?
+- It makes use of Promises with.then() calls rather than deeply nested callback functions, Adding comments so that someone unfamiliar with the program can understand what it does to the program flow. The syntax is really general and simple fetch(url) is really easy to understand.
+- Does not keep a record of readyState values (0..4).
+- Plays nicely with modern JavaScript JS features like async/await. 
+
+3. What is the purpose of the.then() and.catch() methods in Fetch?
+-.then() Executes upon success of the request. It takes the response and parses it into JSON, and manages the data to be shown on the page. -.catch() Care acts when something FAILS.
+Catches any network errors that occur, and also handles server errors and invalid data. Displays an error message instead of halting the script. 
+
+4. What happens when you send a POST request to the placeholder API?
+- Parser reads the data of your new post to API(title body userId). - Does NOT save the data on its own (it is a fake/test API).
+- A RESPONSE with the NEW POST ID (normally 101). appears.
